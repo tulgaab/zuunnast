@@ -71,10 +71,10 @@
             }
         });
         $rootScope.$on('$viewContentLoading', function(event, viewConfig){ 
-            $("#loaderBody").show();
+            document.getElementById("loaderBody").style.display = 'block';
         });
         $rootScope.$on('$viewContentLoaded', function() {
-            $("#loaderBody").hide();
+            document.getElementById("loaderBody").style.display = 'none';
         });
         
         firebase.auth().onAuthStateChanged(function(user) {
