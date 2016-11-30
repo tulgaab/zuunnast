@@ -951,3 +951,32 @@ p.desc_section {
   margin-right: 15px;
   margin-bottom: 15px;
 }
+
+.loader {
+  border: 5px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 5px solid #92bb67;
+  border-bottom: 5px solid #92bb67;
+  width: 20vh;
+  height: 20vh;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+#loaderBody{
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  padding: 40vh;
+  background: #fff;
+}

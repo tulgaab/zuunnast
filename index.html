@@ -28,10 +28,15 @@
     }
   }(window.location))
 </script>
-<!-- End Single Page Apps for GitHub Pages -->
 </head>
 
 <body ng-app="app" ng-controller="IndexController as vm">
+  <div id="loaderBody">
+    <center>
+      <div class="loader"></div>
+    </center>
+  </div>
+  
   <div ui-view="header" style="float:left; width:100%;"></div>
   <div ui-view="main" style="float:left; width:100%;"></div>
   <div style="float:left;width:100%;" id="footer">

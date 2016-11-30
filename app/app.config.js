@@ -70,6 +70,12 @@
                 $state.go("app.login");
             }
         });
+        $rootScope.$on('$viewContentLoading', function(event, viewConfig){ 
+            $("#loaderBody").show();
+        });
+        $rootScope.$on('$viewContentLoaded', function() {
+            $("#loaderBody").hide();
+        });
         
         firebase.auth().onAuthStateChanged(function(user) {
           if (user) {
