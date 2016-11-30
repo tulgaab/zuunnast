@@ -6,7 +6,7 @@
     .controller('IndexController', IndexController);
 
   /** @ngInject */
-  function IndexController($scope, $mdDialog, $filter, $firebaseAuth, $firebaseObject, Auth, $rootScope, $firebaseArray) {
+  function IndexController($scope, $mdDialog, $filter, $firebaseAuth, $firebaseObject, Auth, $rootScope, $firebaseArray,$state) {
     var vm = this;
     vm.currentUser = $rootScope.currentUser;
 

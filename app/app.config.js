@@ -64,7 +64,7 @@
     }
 
     function runBlock($cookies, mainService, $rootScope, $http, $state) {
-
+        $rootScope.$state = $state;
         $rootScope.$on("$stateChangeError", function(event, toState, toParams, fromState, fromParams, error) {
             if (error === "AUTH_REQUIRED") {
                 $state.go("app.login");
