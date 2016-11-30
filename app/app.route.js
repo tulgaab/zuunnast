@@ -7,7 +7,7 @@
 
     /** @ngInject */
     function routeConfig($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider) {
-        $locationProvider.html5Mode(false);
+        $locationProvider.html5Mode(true);
         $httpProvider.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
         $urlRouterProvider.otherwise('/');
 
