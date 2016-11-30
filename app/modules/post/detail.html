@@ -1,0 +1,8 @@
+<div class="container" style="padding:0;">
+    <div class="page_content">
+        <h2 ng-bind="vm.post.title"></h2>
+        <span ng-bind="vm.post.createdat | date:'yyyy-MM-dd'" style="color:#ccc;"></span>
+        <img ng-src="{{vm.post.image}}" ng-if="vm.post.image.length > 0" style="width:100%;">
+        <p ng-bind="vm.post.description"></p>
+    </div>
+</div>

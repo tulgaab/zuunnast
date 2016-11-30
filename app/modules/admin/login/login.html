@@ -1,0 +1,28 @@
+<div class="centered" id="login_form">
+    <img src="assets/images/logozuunnast.png" style="max-width:100%;">
+    <h3>Системд нэвтрэх</h3>
+    <form ng-submit="vm.login()">
+        <md-input-container class="md-block">
+          <label>Имэйл хаяг</label>
+          <input type="text" ng-model="vm.user.email">
+        </md-input-container>
+        <md-input-container class="md-block">
+          <label>Нууц үг</label>
+          <input type="password" ng-model="vm.user.password">
+        </md-input-container>
+        <md-button type="submit" class="md-accent md-raised" style="width:100%; margin:0px;">Нэвтрэх</md-button>
+    </form>
+</div>
+
+<style>
+    body{
+        background-image: url(assets/images/bg1_bkup.jpg);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover !important;
+    }
+    #footer{
+        position:absolute;
+        bottom:0;
+    }
+</style>

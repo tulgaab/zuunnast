@@ -1,0 +1,8 @@
+<div class="container" style="padding:0;">
+    <div class="postlist" ng-repeat="post in vm.posts">
+        <h2 ng-bind="post.title" style="margin:0px;cursor:pointer;" ui-sref="app.postdetail({id:post.$id})"></h2>
+        <span ng-bind="post.createdat | date:'yyyy-MM-dd'" style="color:#ccc;"></span>
+        <p ng-bind="post.description"></p>
+    </div>
+    
+</div>

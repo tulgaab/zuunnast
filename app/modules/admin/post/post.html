@@ -1,0 +1,54 @@
+<div class="container dashboard">
+    <h2 class="logo_title">Мэдээний жагсаалт</h2>
+    <md-button ng-click="vm.showPostDialog(-1, $event)" style="float:right;background:#92bb67;color:#fff;" class="md-raised">Мэдээ нэмэх</md-button>
+    <table style="width:100%;" class="table table-striped">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Гарчиг</th>
+                <th>Нийтлэсэн огноо</th>
+                <th>Үйлдэл</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="p in vm.posts track by $index">
+                <td ng-bind="$index+1"></td>
+                <td ng-bind="p.title"></td>
+                <td ng-bind="p.createdat | date:'yyyy-MM-dd HH:mm'"></td>
+                <td style="width:190px; text-align:center;">
+                    <md-button class="md-fab md-mini" aria-label="Edit" ng-click="vm.showPostDialog($index, $event)">
+                        <md-tooltip>Мэдээг засах</md-tooltip>
+                        <md-icon aria-label="exit" class="material-icons">edit</md-icon>
+                    </md-button>
+                    <md-button class="md-fab md-mini" aria-label="Delete" ng-click="vm.showPostDeleteDialog($index, $event)">
+                        <md-tooltip>Мэдээг устгах</md-tooltip>
+                        <md-icon aria-label="exit" class="material-icons">delete</md-icon>
+                    </md-button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div style="clear:both"></div>
+</div>
+<div style="visibility: hidden">
+    <div class="md-dialog-container" id="postDialog">
+        <md-dialog layout-padding flex="50">
+            <h2>Мэдээлэл засах</h2>
+            
+            <form ng-submit="vm.updatePost()">
+                <img ng-src="{{vm.singlepost.image}}" ng-if="vm.singlepost.image.length > 0" style="width:100%;">
+                <md-input-container class="md-block">
+                  <label>Гарчиг</label>
+                  <input type="text" ng-model="vm.singlepost.title" required>
+                </md-input-container>
+                <md-input-container class="md-block">
+                  <label>Агуулга</label>
+                  <textarea ng-model="vm.singlepost.description" required></textarea>
+                </md-input-container>
+                <input type="file" ngf-select="vm.fileSelected($file)" multiple="false">
+                <md-button type="submit" class="md-accent md-raised">Хадгалах</md-button>
+            </form>
+            
+        </md-dialog>
+    </div>
+</div>

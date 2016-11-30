@@ -1,0 +1,25 @@
+<section id="header">
+
+    <md-toolbar style="background-color:#92bb67;">
+        <div class="container">
+            <div class="md-toolbar-tools" style="padding:0px;">
+                <span class="logo_title">Удирдлагын хэсэг</span>
+                <span flex></span>
+                <md-button ui-sref="app.login" ng-if="!vm.currentUser.uid.length > 0">
+                    Нэвтрэх
+                </md-button>
+                <md-menu ng-if="vm.currentUser.uid.length > 0">
+                    <md-button ng-bind="vm.currentUser.email" ng-click="$mdOpenMenu()"></md-button>
+                    <md-menu-content>
+                        <md-menu-item>
+                            <md-button ng-click="auth.$signOut()">
+                                <md-icon aria-label="exit" class="material-icons">exit_to_app</md-icon>
+                                Гарах
+                            </md-button>
+                        </md-menu-item>
+                    </md-menu-content>
+                </md-menu>
+            </div>
+        </div>
+    </md-toolbar>
+</section>

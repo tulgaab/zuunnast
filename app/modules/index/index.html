@@ -1,0 +1,96 @@
+<div style="float:left;background-color:#fff;width:100%;">
+  <div class="container main_content" style="padding:0px 15px;">
+    <div layout="row" layout-xs="column" layout-sm="column">
+      <div flex-gt-sm="33" class="feature_item">
+        <h3 class="title_section">Эрхэм зорилго</h3>
+        <h4 class="title_section">principles</h4>
+        <p class="desc_section">“Зуун наст ЭМҮ”эмийн үйлдвэртээ вакцин, мал угаалгын бэлдмэл/креолин Х5%/ үйлдвэрлэж халдварт өвчнөөс сэргийлсэн угаалгыг орон даяар жилд хоёроос доошгүй удаа хийх</p>
+      </div>
+      <div flex-gt-sm="33" class="feature_item">
+        <h3 class="title_section">Үнэт зүйлс</h3>
+        <h4 class="title_section">values</h4>
+        <p class="desc_section">Хархорин дахь мах үйлдвэрлэх комбинатаа түшиглэн дэлхийн стандартад нийцсэн мах боловсруулах үйлдвэр байгуулах</p>
+      </div>
+      <div flex-gt-sm="33" class="feature_item">
+        <h3 class="title_section">Алсын хараа</h3>
+        <h4 class="title_section">vision</h4>
+        <p class="desc_section">Малын эрүүл мэндийг хамгаалах Мал эрүүлжүүлэх чиглэлээр Монгол Улсын Засгийн газартай хамтран ажиллахыг бид зорьж байна</p>
+      </div>
+    </div>
+  </div>
+</div>
+<table border="0" style="width:100%;border-spacing: 0px;" ng-if="vm.posts.length > 0">
+  <tr>
+    <td hide-xs style="width:50%;padding:0px;background:url(assets/images/Laboratory_HD_Wallpaper.jpg);background-size: cover !important;background-position: center center;background-repeat: no-repeat;">
+      &nbsp;
+    </td>
+    <td style="width:50%; background:#92bb67;padding:20px;color:#fff;padding-bottom:70px;">
+      <h3 style="font-size:28px;font-family:'Roboto';font-weight:400;padding:50px 0px;float:left; width:100%;">Шинэ мэдээ</h3>
+      <div style="float:left; width:100%" ng-repeat="post in vm.posts track by $index" ng-if="$index == 0">
+        <div class="post_title" ng-bind="post.title"></div>
+        <p class="post_desc" ng-bind="post.description"></p>
+        <a ui-sref="app.postdetail({id:post.$id})" style="font-size:18px; font-family:'Roboto';color:#fff;float:left;">дэлгэрэнгүй</a>
+      </div>
+    </td>
+  </tr>
+</table>
+
+<div style="float:left;background-color:#fff;width:100%;">
+  <div class="container main_content" style="padding:0px 15px;">
+    <h3 style="font-size:28px; font-family:'Roboto'; font-weight:400;text-align:center;">Үйлдвэрлэн гаргах бүтээгдэхүүнүүд</h3>
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div style="width:100%; float:left;">
+            <table border="0" style="width:100%;border-spacing: 0px;">
+              <tr>
+                <td hide-xs style="width:50%;padding:0px;background:url(assets/images/Laboratory_HD_Wallpaper.jpg);background-size: cover !important;background-position: center center;background-repeat: no-repeat;">
+                  &nbsp;
+                </td>
+                <td style="width:50%; padding:20px;padding-bottom:70px;">
+                  <h3 style="color:#92bb67; font-size:28px; font-weight:400; font-family:'Roboto';">Альбендазол 10% туулгалт</h3>
+                  <p style="color:#777777;font-size:18px; font-weight:400; font-family:'Roboto';line-height:30px;">Паразит хорхойн хоол боловсруулах болон бодисын солилцооны бүтээгдэхүүнийг шингээх, дамжуулах үйл ажиллагаа сааруулна. Малд хавар, намар дотуур олгоно.</p>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div style="width:100%; float:left;">
+            <table border="0" style="width:100%;border-spacing: 0px;">
+              <tr>
+                <td hide-xs style="width:50%;padding:0px;background:url(assets/images/Laboratory_HD_Wallpaper.jpg);background-size: cover !important;background-position: center center;background-repeat: no-repeat;">
+                  &nbsp;
+                </td>
+                <td style="width:50%; padding:20px;padding-bottom:70px;">
+                  <h3 style="color:#92bb67; font-size:28px; font-weight:400; font-family:'Roboto';">Ивермектин 1% тарилга</h3>
+                  <p style="color:#777777;font-size:18px; font-weight:400; font-family:'Roboto';line-height:30px;">Паразит хорхойн мэдрэлийн ба булчингийн эсүүдийн хоорондох сэрэл дамжих үйл ажиллагааг саатуулж, саажуулан үхүүлэх үйлдэл үзүүлнэ. Харин хавтгай болон туузан хорхойд уг бэлдмэл үйлчлэхгүй. Хавар, намарт эхний тарилтаас 14 хоногийн дараа
+                    давтан тарихад үр дүнтэй.</p>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div style="width:100%; float:left;">
+            <table border="0" style="width:100%;border-spacing: 0px;">
+              <tr>
+                <td hide-xs style="width:50%;padding:0px;background:url(assets/images/Laboratory_HD_Wallpaper.jpg);background-size: cover !important;background-position: center center;background-repeat: no-repeat;">
+                  &nbsp;
+                </td>
+                <td style="width:50%; padding:20px;padding-bottom:70px;">
+                  <h3 style="color:#92bb67; font-size:28px; font-weight:400; font-family:'Roboto';">Креолин-Х 5% угаалгын бэлдмэл</h3>
+                  <p style="color:#777777;font-size:18px; font-weight:400; font-family:'Roboto';line-height:30px;">Креолин-Х 5% бэлдмэлийг малын их, бага эмчийн хяналтын дор найруулна. Мал амьтны нойтон хамуу, толгойн хамуу, маагуу, зэргийг эмчлэх, урьдчилан сэргийлэх, ширх, хүрд бэлчээрийн хачиг болон цус сорогч, ялаа, шумуул, дэлэнч, арьс болон
+                    ходоодны гуурын ялаа, хар ялаа үхүүлэх, дайжуулах үйлчилгээтэй.</p>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+</div>
+<iframe width="100%" height="400" frameborder="0" style="border:0;margin-top:30px;"
+src="https://www.google.com/maps/embed/v1/view?zoom=10&center=47.8864%2C106.9057&key=AIzaSyAIVJnh983eMYrFwGCXljBSGbDH-TCTtFs" allowfullscreen></iframe>
