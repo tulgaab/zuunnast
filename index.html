@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="assets/fonts/roboto/roboto.css">
   <link rel="stylesheet" href="assets/app.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async='async'></script>
   <title>Зуун наст эмийн үйлдвэр</title>
   <base href="/zuunnast/">
   <script type="text/javascript">
@@ -28,6 +29,25 @@
     }
   }(window.location))
 </script>
+
+<script>
+    var OneSignal = window.OneSignal || [];
+    OneSignal.push(["init", {
+      appId: "843ec4c8-8dbc-469d-bd85-7eb2377174c5",
+      autoRegister: false, /* Set to true to automatically prompt visitors */
+      subdomainName: 'mram',
+      /*
+      subdomainName: Use the value you entered in step 1.4: http://imgur.com/a/f6hqN
+      */
+      httpPermissionRequest: {
+        enable: true
+      },
+      persistNotification: false,
+      notifyButton: {
+          enable: true /* Set to false to hide */
+      }
+    }]);
+  </script>
 </head>
 
 <body ng-app="app" ng-controller="IndexController as vm">
